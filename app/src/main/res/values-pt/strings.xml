@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="add_product">Adicionar produto</string>
+    <string name="delete_all_counts">Excluir todas as contagens</string>
+    <string name="delete_all_products">Excluir todos os produtos</string>
+    <string name="save_to_csv">Salvar em CSV</string>
+    <string name="add_new_product">Adicionar novo produto…</string>
+    <string name="quantity">Quantidade</string>
+    <string name="cancel">Cancelar</string>
+    <string name="confirm_clear_all">Tem certeza? Todas as contagens serão excluídas.</string>
+    <string name="delete">Excluir</string>
+    <string name="are_you_sure">Tem certeza?</string>
+    <string name="delete_products_message">As contagens não serão excluídas, mas seus produtos serão adicionados novamente caso tente editá-los.</string>
+    <string name="empty_product">O nome do produto não pode estar vazio.</string>
+    <string name="hint_permissions">Por favor conceda permissões para criar o arquivo CSV.</string>
+    <string name="lot_code">Lote</string>
+    <string name="manage_products">Gerenciar produtos</string>
+    <string name="product">Produto</string>
+    <string name="renaming_product">Renomeando produto…</string>
+    <string name="save">Salvar</string>
+    <string name="select_product">Selecione o produto…</string>
+    <string name="yes_delete">Sim, excluir</string>
+    <string name="chooser_title">Enviar email usando</string>
+    <string name="edit_product">Editar produto</string>
+    <string name="email_subject">Inventory Counter - Relatório</string>
+    <string name="error_csv">Erro ao criar o arquivo CSV.</string>
+    <string name="error_no_lot_code">Por favor preencha um lote.</string>
+    <string name="error_no_product">Por favor preencha um produto.</string>
+    <string name="error_no_quantity">Por favor preencha uma quantidade.</string>
+    <string name="no">Não</string>
+    <string name="rename">Renomear</string>
+    <string name="rename_product">Renomear produto</string>
+    <string name="unable_to_save">Não foi possível salvar o arquivo CSV.</string>
+</resources>

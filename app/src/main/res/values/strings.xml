@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name" translatable="false">Inventory Counter</string>
+    <string name="save_to_csv">Save to CSV</string>
+    <string name="delete_all_counts">Delete all counts</string>
+    <string name="quantity">Quantity</string>
+    <string name="delete">Delete</string>
+    <string name="save">Save</string>
+    <string name="lot_code">Lot code</string>
+    <string name="product">Product</string>
+    <string name="hint_permissions">Please give permissions to create the CSV file.</string>
+    <string name="confirm_clear_all">Are you sure? This will delete all counts.</string>
+    <string name="select_product">Select product…</string>
+    <string name="add_new_product">Add new product…</string>
+    <string name="manage_products">Manage products</string>
+    <string name="empty_product">The product name cannot be empty.</string>
+    <string name="delete_all_products">Delete all products</string>
+    <string name="add_product">Add product</string>
+    <string name="are_you_sure">Are you sure?</string>
+    <string name="delete_products_message">This will not delete counted items, but their products will be readded if you try to edit them.</string>
+    <string name="cancel">Cancel</string>
+    <string name="yes_delete">Yes, delete</string>
+    <string name="renaming_product">Renaming product…</string>
+    <string name="edit_product">Edit product</string>
+    <string name="error_no_product">Please provide a product.</string>
+    <string name="error_no_lot_code">Please provide a lot code.</string>
+    <string name="error_no_quantity">Please provide a quantity.</string>
+    <string name="no">No</string>
+    <string name="rename_product">Rename product</string>
+    <string name="rename">Rename</string>
+    <string name="unable_to_save">Unable to save CSV file.</string>
+    <string name="email_subject">Inventory Counter - Report</string>
+    <string name="chooser_title">Send email using</string>
+    <string name="error_csv">Error creating CSV file.</string>
+</resources>

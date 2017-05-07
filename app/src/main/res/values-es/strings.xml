@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="add_product">Anãdir producto</string>
+    <string name="delete_all_counts">Eliminar todos los recuentos</string>
+    <string name="add_new_product">Añadir nuevo producto…</string>
+    <string name="delete">Eliminar</string>
+    <string name="delete_all_products">Eliminar todos los productos</string>
+    <string name="product">Producto</string>
+    <string name="no">No</string>
+    <string name="yes_delete">Sí, eliminar</string>
+    <string name="save">Guardar</string>
+    <string name="save_to_csv">Guardar como CSV</string>
+    <string name="select_product">Seleccionar producto…</string>
+    <string name="unable_to_save">No puede guardar el archivo CSV.</string>
+    <string name="renaming_product">Cambiando el nombre…</string>
+    <string name="rename_product">Renombrar producto…</string>
+    <string name="rename">Renombrar</string>
+    <string name="quantity">Cantidad</string>
+    <string name="manage_products">Administrar productos</string>
+    <string name="lot_code">Lote</string>
+    <string name="hint_permissions">Por favor dé permisos para crear el archivo CSV.</string>
+    <string name="error_no_quantity">Por favor indique una cantidad.</string>
+    <string name="error_no_product">Por favor indique un producto.</string>
+    <string name="error_no_lot_code">Por favor indique un lote.</string>
+    <string name="error_csv">Error al crear el archivo CSV.</string>
+    <string name="empty_product">El nombre del producto no puede estar vacío.</string>
+    <string name="email_subject">Inventory Counter - Informe</string>
+    <string name="edit_product">Editar producto</string>
+    <string name="delete_products_message">Esto no eliminará los recuentos, pero sus productos volverán a ser añadidos si intenta editarlos.</string>
+    <string name="confirm_clear_all">¿Estás seguro? Esto eliminará todos los recuentos.</string>
+    <string name="chooser_title">Enviar correo electrónico utilizando</string>
+    <string name="cancel">Cancelar</string>
+    <string name="are_you_sure">¿Estás seguro?</string>
+</resources>
