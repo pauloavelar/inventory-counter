@@ -1,4 +1,4 @@
-package com.pauloavelar.inventory;
+package com.pauloavelar.inventory.view;
 
 import android.content.Intent;
 import android.os.Handler;

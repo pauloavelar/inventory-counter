@@ -6,13 +6,13 @@
     <item
         android:id="@+id/action_clear_all"
         android:title="@string/delete_all_products"
-        android:icon="@android:drawable/ic_menu_delete"
+        android:icon="@drawable/ic_menu_delete"
         app:showAsAction="ifRoom" />
 
     <item
         android:id="@+id/action_add"
         android:title="@string/add_product"
-        android:icon="@android:drawable/ic_menu_add"
+        android:icon="@drawable/ic_menu_add"
         app:showAsAction="ifRoom" />
 
 </menu>

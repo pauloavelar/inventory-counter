@@ -1,4 +1,4 @@
-package com.pauloavelar.inventory;
+package com.pauloavelar.inventory.view;
 
 import android.content.Context;
 import android.support.design.widget.CoordinatorLayout;
@@ -10,7 +10,7 @@ import android.util.AttributeSet;
 import android.view.View;
 import android.view.animation.Interpolator;
 
-@SuppressWarnings("unused")
+@SuppressWarnings({"unused", "WeakerAccess"})
 public class FabBehavior extends FloatingActionButton.Behavior {
     private static final Interpolator INTERPOLATOR = new FastOutSlowInInterpolator();
     private boolean mIsAnimatingOut = false;

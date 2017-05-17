@@ -1,9 +1,11 @@
-package com.pauloavelar.inventory;
+package com.pauloavelar.inventory.dao;
 
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+
+import com.pauloavelar.inventory.model.InventoryItem;
 
 import java.util.ArrayList;
 
@@ -90,7 +92,7 @@ public final class InventoryDAO {
         return csv.toString();
     }
 
-    public static void renameProducts(Context context, String oldName, String newName) {
+    static void renameProducts(Context context, String oldName, String newName) {
         SQLiteDatabase db = DbHelper.getInstance(context).getWritableDatabase();
         ContentValues values = new ContentValues();
         values.put(DbHelper.C_INV_PRODUCT, newName);

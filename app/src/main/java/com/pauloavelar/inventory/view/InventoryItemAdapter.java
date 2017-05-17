@@ -1,4 +1,4 @@
-package com.pauloavelar.inventory;
+package com.pauloavelar.inventory.view;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -6,11 +6,14 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.pauloavelar.inventory.R;
+import com.pauloavelar.inventory.model.InventoryItem;
+
 import java.util.ArrayList;
 
-public class InventoryItemAdapter extends RecyclerView.Adapter<InventoryItemAdapter.ViewHolder> {
+class InventoryItemAdapter extends RecyclerView.Adapter<InventoryItemAdapter.ViewHolder> {
 
-    public interface OnItemInteraction {
+    interface OnItemInteraction {
         void onItemClick(InventoryItem item);
         void onItemLongPress(InventoryItem item);
     }
@@ -18,14 +21,14 @@ public class InventoryItemAdapter extends RecyclerView.Adapter<InventoryItemAdap
     static class ViewHolder extends RecyclerView.ViewHolder {
         TextView product, lotCode, bagCount;
 
-        public ViewHolder(View itemView) {
+        ViewHolder(View itemView) {
             super(itemView);
             product  = (TextView) itemView.findViewById(R.id.list_product);
             lotCode  = (TextView) itemView.findViewById(R.id.list_lot_code);
             bagCount = (TextView) itemView.findViewById(R.id.list_bag_count);
         }
 
-        public void bind(final InventoryItem item, final OnItemInteraction listener) {
+        void bind(final InventoryItem item, final OnItemInteraction listener) {
             product.setText(item.getProduct());
             lotCode.setText(item.getLotCode());
             bagCount.setText(String.valueOf(item.getBagCount()));
@@ -47,7 +50,7 @@ public class InventoryItemAdapter extends RecyclerView.Adapter<InventoryItemAdap
     private ArrayList<InventoryItem> mItems;
     private OnItemInteraction mListener;
 
-    public void clearAll() {
+    void clearAll() {
         if (mItems != null) mItems.clear();
         notifyDataSetChanged();
     }
@@ -75,11 +78,11 @@ public class InventoryItemAdapter extends RecyclerView.Adapter<InventoryItemAdap
         return mItems.size();
     }
 
-    public InventoryItemAdapter(OnItemInteraction listener) {
+    InventoryItemAdapter(OnItemInteraction listener) {
         mListener = listener;
     }
 
-    public void setItems(ArrayList<InventoryItem> items) {
+    void setItems(ArrayList<InventoryItem> items) {
         mItems = items;
         notifyDataSetChanged();
     }

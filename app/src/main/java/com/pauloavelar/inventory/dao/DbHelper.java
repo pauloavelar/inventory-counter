@@ -1,27 +1,27 @@
-package com.pauloavelar.inventory;
+package com.pauloavelar.inventory.dao;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-public class DbHelper extends SQLiteOpenHelper {
+class DbHelper extends SQLiteOpenHelper {
 
     // database information
-    public static final int DATABASE_VERSION = 6;
-    public static final String DATABASE_NAME = "inventory.db";
+    private static final int DATABASE_VERSION = 6;
+    private static final String DATABASE_NAME = "inventory.db";
 
     // table names
-    public static final String T_INVENTORY = "inventory";
-    public static final String T_PRODUCT   = "product";
+    static final String T_INVENTORY = "inventory";
+    static final String T_PRODUCT   = "product";
 
     // column names
-    public static final String C_INV_ID        = "_id";
-    public static final String C_INV_PRODUCT   = "product";
-    public static final String C_INV_LOT_CODE  = "lot_code";
-    public static final String C_INV_BAG_COUNT = "bag_count";
-    public static final String C_INV_TIMESTAMP = "date_time";
+    static final String C_INV_ID        = "_id";
+    static final String C_INV_PRODUCT   = "product";
+    static final String C_INV_LOT_CODE  = "lot_code";
+    static final String C_INV_BAG_COUNT = "bag_count";
+    static final String C_INV_TIMESTAMP = "date_time";
 
-    public static final String C_PRODUCT_NAME  = "name";
+    static final String C_PRODUCT_NAME  = "name";
 
     // table creation
     private static final String CREATE_INVENTORY =
@@ -38,7 +38,7 @@ public class DbHelper extends SQLiteOpenHelper {
 
     private static DbHelper mInstance;
 
-    public synchronized static DbHelper getInstance(Context context) {
+    synchronized static DbHelper getInstance(Context context) {
         if (mInstance == null) {
             mInstance = new DbHelper(context.getApplicationContext());
         }

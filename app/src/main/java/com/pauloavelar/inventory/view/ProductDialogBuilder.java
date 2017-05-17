@@ -1,4 +1,4 @@
-package com.pauloavelar.inventory;
+package com.pauloavelar.inventory.view;
 
 import android.app.AlertDialog;
 import android.content.Context;
@@ -6,13 +6,16 @@ import android.content.DialogInterface;
 import android.widget.EditText;
 import android.widget.Toast;
 
-public class ProductDialogBuilder {
+import com.pauloavelar.inventory.R;
+import com.pauloavelar.inventory.dao.ProductDAO;
 
-    public static void showProductDialog(Context context) {
+class ProductDialogBuilder {
+
+    static void showProductDialog(Context context) {
         showProductDialog(context, null);
     }
 
-    public static void showProductDialog(Context context, String product) {
+    static void showProductDialog(Context context, String product) {
         AlertDialog.Builder builder = new AlertDialog.Builder(context);
         builder
             .setTitle(product == null ? R.string.add_new_product : R.string.rename_product)
@@ -35,7 +38,7 @@ public class ProductDialogBuilder {
                         ProductDAO.insert(context, editText.getText().toString());
                     } else {
                         ProductDAO.rename(context, productName, editText.getText().toString());
-                        Toast.makeText(context, R.string.renaming_product, Toast.LENGTH_SHORT).show();
+                        Toast.makeText(context, R.string.renaming, Toast.LENGTH_SHORT).show();
                     }
                 } else {
                     Toast.makeText(context, R.string.empty_product, Toast.LENGTH_SHORT).show();

@@ -1,4 +1,4 @@
-package com.pauloavelar.inventory;
+package com.pauloavelar.inventory.view;
 
 import android.app.AlertDialog;
 import android.content.BroadcastReceiver;
@@ -7,12 +7,16 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Bundle;
+import android.support.v4.app.NavUtils;
 import android.support.v4.content.LocalBroadcastManager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.Menu;
 import android.view.MenuItem;
+
+import com.pauloavelar.inventory.R;
+import com.pauloavelar.inventory.dao.ProductDAO;
 
 public class ProductsActivity extends AppCompatActivity implements DialogInterface.OnClickListener {
 

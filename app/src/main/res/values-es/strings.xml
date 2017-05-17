@@ -12,7 +12,7 @@
     <string name="save_to_csv">Guardar como CSV</string>
     <string name="select_product">Seleccionar producto…</string>
     <string name="unable_to_save">No puede guardar el archivo CSV.</string>
-    <string name="renaming_product">Cambiando el nombre…</string>
+    <string name="renaming">Cambiando el nombre…</string>
     <string name="rename_product">Renombrar producto…</string>
     <string name="rename">Renombrar</string>
     <string name="quantity">Cantidad</string>
@@ -31,4 +31,5 @@
     <string name="chooser_title">Enviar correo electrónico utilizando</string>
     <string name="cancel">Cancelar</string>
     <string name="are_you_sure">¿Estás seguro?</string>
+    <string name="no_inventories">No se agregaron inventarios</string>
 </resources>

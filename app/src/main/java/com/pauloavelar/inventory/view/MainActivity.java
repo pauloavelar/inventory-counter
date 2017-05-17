@@ -1,4 +1,4 @@
-package com.pauloavelar.inventory;
+package com.pauloavelar.inventory.view;
 
 import android.Manifest;
 import android.app.AlertDialog;
@@ -20,6 +20,10 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import com.pauloavelar.inventory.R;
+import com.pauloavelar.inventory.dao.InventoryDAO;
+import com.pauloavelar.inventory.model.InventoryItem;
+
 import java.io.File;
 import java.io.FileOutputStream;
 import java.text.SimpleDateFormat;
@@ -32,6 +36,7 @@ public class MainActivity extends AppCompatActivity
     private static final int PERMISSION_EXTERNAL_STORAGE = 15444;
 
     private InventoryItemAdapter mAdapter;
+    private View mEmptyView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +46,7 @@ public class MainActivity extends AppCompatActivity
         setSupportActionBar(toolbar);
         findViewById(R.id.fab).setOnClickListener(this);
 
+        mEmptyView = findViewById(R.id.inventory_empty);
         mAdapter = new InventoryItemAdapter(new InventoryItemAdapter.OnItemInteraction() {
             @Override public void onItemClick(InventoryItem item) {
                 Intent intent = new Intent(MainActivity.this, DetailActivity.class);
@@ -62,7 +68,12 @@ public class MainActivity extends AppCompatActivity
     @Override
     protected void onResume() {
         super.onResume();
+        // It should be async, but the data structure is too simple to make it hang noticeably
+        // Also there is no need to reload the entire dataset after changing one item
+        // But it would not boost performance and this has been tested in low end devices (Moto G1)
         mAdapter.setItems(InventoryDAO.getAll(this));
+        // damn you Google and your lack of empty view support on ReciclerViews!
+        mEmptyView.setVisibility(mAdapter.getItemCount() == 0 ? View.VISIBLE : View.INVISIBLE);
     }
 
     @Override
@@ -103,14 +114,13 @@ public class MainActivity extends AppCompatActivity
             return;
         }
 
+        String now = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss", Locale.US).format(new Date());
+        String filename = "inventory." + now + ".csv";
         try {
-            String now = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss", Locale.US).format(new Date());
-            String filename = "inventory." + now + ".csv";
-            File directory =
-                    Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOCUMENTS);
-            directory.mkdirs();
+            File d = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOCUMENTS);
+            d.mkdirs();
 
-            File csv = new File(directory, filename);
+            File csv = new File(d, filename);
             FileOutputStream fos = new FileOutputStream(csv);
             String content = InventoryDAO.exportAllToCSV(this);
             fos.write(content.getBytes());
@@ -165,6 +175,7 @@ public class MainActivity extends AppCompatActivity
     public void onClick(DialogInterface dialog, int buttonId) {
         InventoryDAO.deleteAll(this);
         mAdapter.clearAll();
+        mEmptyView.setVisibility(mAdapter.getItemCount() == 0 ? View.VISIBLE : View.INVISIBLE);
     }
 
     @Override

@@ -1,4 +1,4 @@
-package com.pauloavelar.inventory;
+package com.pauloavelar.inventory.model;
 
 import android.os.Parcel;
 import android.os.Parcelable;

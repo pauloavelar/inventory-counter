@@ -1,4 +1,4 @@
-package com.pauloavelar.inventory;
+package com.pauloavelar.inventory.dao;
 
 import android.content.ContentValues;
 import android.content.Context;

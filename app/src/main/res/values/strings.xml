@@ -2,6 +2,7 @@
     <string name="app_name" translatable="false">Inventory Counter</string>
     <string name="save_to_csv">Save to CSV</string>
     <string name="delete_all_counts">Delete all counts</string>
+    <string name="no_inventories">No inventories were added</string>
     <string name="quantity">Quantity</string>
     <string name="delete">Delete</string>
     <string name="save">Save</string>
@@ -19,7 +20,7 @@
     <string name="delete_products_message">This will not delete counted items, but their products will be readded if you try to edit them.</string>
     <string name="cancel">Cancel</string>
     <string name="yes_delete">Yes, delete</string>
-    <string name="renaming_product">Renaming product…</string>
+    <string name="renaming">Renaming product…</string>
     <string name="edit_product">Edit product</string>
     <string name="error_no_product">Please provide a product.</string>
     <string name="error_no_lot_code">Please provide a lot code.</string>

@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context=".MainActivity">
+    tools:context=".view.MainActivity">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
@@ -24,11 +24,41 @@
 
     </android.support.design.widget.AppBarLayout>
 
+    <RelativeLayout
+        android:id="@+id/inventory_empty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:visibility="invisible" >
+
+        <ImageView
+            android:id="@+id/image_empty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/text_empty"
+            android:layout_alignStart="@id/text_empty"
+            android:contentDescription="@string/no_inventories"
+            android:src="@drawable/inventory_gray" />
+
+        <TextView
+            android:id="@id/text_empty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/image_empty"
+            android:layout_margin="10dp"
+            android:textColor="@color/gray"
+            android:text="@string/no_inventories"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
     <android.support.v7.widget.RecyclerView
         android:id="@+id/list_items"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scrollbars="vertical"
+
         tools:listitem="@layout/layout_list"
         app:layout_behavior="@string/appbar_scrolling_view_behavior" />
 
@@ -38,9 +68,9 @@
         android:layout_height="60dp"
         android:layout_gravity="bottom|end"
         android:layout_margin="@dimen/fab_margin"
-        android:src="@drawable/ic_add_black_24dp"
+        android:src="@drawable/ic_add_fab"
         android:tint="@color/colorPrimary"
         android:tintMode="src_atop"
-        app:layout_behavior="com.pauloavelar.inventory.FabBehavior" />
+        app:layout_behavior="com.pauloavelar.inventory.view.FabBehavior" />
 
 </android.support.design.widget.CoordinatorLayout>

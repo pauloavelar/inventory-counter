@@ -16,7 +16,7 @@
     <string name="lot_code">Lote</string>
     <string name="manage_products">Gerenciar produtos</string>
     <string name="product">Produto</string>
-    <string name="renaming_product">Renomeando produto…</string>
+    <string name="renaming">Renomeando produto…</string>
     <string name="save">Salvar</string>
     <string name="select_product">Selecione o produto…</string>
     <string name="yes_delete">Sim, excluir</string>
@@ -31,4 +31,5 @@
     <string name="rename">Renomear</string>
     <string name="rename_product">Renomear produto</string>
     <string name="unable_to_save">Não foi possível salvar o arquivo CSV.</string>
+    <string name="no_inventories">Nenhum inventário foi adicionado</string>
 </resources>

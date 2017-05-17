@@ -7,7 +7,7 @@
     android:layout_height="50dp"
     android:gravity="center_vertical"
     android:padding="5dp"
-    android:singleLine="true"
+    android:maxLines="1"
     android:ellipsize="marquee"
     android:textSize="18sp"
     android:textAlignment="inherit" />
