@@ -13,7 +13,7 @@
     <string name="delete_products_message">As contagens não serão excluídas, mas seus produtos serão adicionados novamente caso tente editá-los.</string>
     <string name="empty_product">O nome do produto não pode estar vazio.</string>
     <string name="hint_permissions">Por favor conceda permissões para criar o arquivo CSV.</string>
-    <string name="lot_code">Lote</string>
+    <string name="lot_number">Lote</string>
     <string name="manage_products">Gerenciar produtos</string>
     <string name="product">Produto</string>
     <string name="renaming">Renomeando produto…</string>
@@ -23,7 +23,6 @@
     <string name="chooser_title">Enviar email usando</string>
     <string name="edit_product">Editar produto</string>
     <string name="email_subject">Inventory Counter - Relatório</string>
-    <string name="error_csv">Erro ao criar o arquivo CSV.</string>
     <string name="error_no_lot_code">Por favor preencha um lote.</string>
     <string name="error_no_product">Por favor preencha um produto.</string>
     <string name="error_no_quantity">Por favor preencha uma quantidade.</string>
@@ -32,4 +31,6 @@
     <string name="rename_product">Renomear produto</string>
     <string name="unable_to_save">Não foi possível salvar o arquivo CSV.</string>
     <string name="no_inventories">Nenhum inventário foi adicionado</string>
+    <string name="fill_last_lot_number">Preencher último lote</string>
+    <string name="delete_product">Excluir produto</string>
 </resources>

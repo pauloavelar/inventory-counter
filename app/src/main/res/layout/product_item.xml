@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <TextView
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@android:id/text1"
     style="?android:attr/spinnerItemStyle"
+    android:id="@android:id/text1"
     android:layout_width="match_parent"
-    android:layout_height="50dp"
+    android:layout_height="@dimen/field_height"
     android:gravity="center_vertical"
-    android:padding="5dp"
-    android:maxLines="1"
+    android:singleLine="true"
     android:ellipsize="marquee"
-    android:textSize="18sp"
+    android:paddingStart="@dimen/field_padding"
+    android:paddingEnd="@dimen/field_padding"
+    android:textSize="@dimen/field_text_size"
     android:textAlignment="inherit" />

@@ -2,8 +2,8 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="50dp"
-    android:padding="10dp"
+    android:layout_height="@dimen/field_height"
+    android:padding="@dimen/list_item_padding"
     android:background="?attr/selectableItemBackground">
 
     <TextView
@@ -11,31 +11,31 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:gravity="center_vertical"
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
-        android:textSize="20sp"
+        android:layout_marginLeft="@dimen/list_item_horizontal_margin"
+        android:layout_marginRight="@dimen/list_item_horizontal_margin"
+        android:textSize="@dimen/list_item_text_size"
         android:textStyle="bold" />
 
     <TextView
-        android:id="@+id/list_lot_code"
+        android:id="@+id/list_lot_number"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:gravity="center_vertical"
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
+        android:layout_marginLeft="@dimen/list_item_horizontal_margin"
+        android:layout_marginRight="@dimen/list_item_horizontal_margin"
         android:layout_toEndOf="@id/list_product"
-        android:layout_toStartOf="@+id/list_bag_count"
-        android:textSize="20sp" />
+        android:layout_toStartOf="@+id/list_item_count"
+        android:textSize="@dimen/list_item_text_size" />
 
     <TextView
-        android:id="@id/list_bag_count"
+        android:id="@id/list_item_count"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:gravity="center_vertical"
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
+        android:layout_marginLeft="@dimen/list_item_horizontal_margin"
+        android:layout_marginRight="@dimen/list_item_horizontal_margin"
         android:layout_alignParentEnd="true"
         android:textStyle="bold"
-        android:textSize="20sp" />
+        android:textSize="@dimen/list_item_text_size" />
 
 </RelativeLayout>

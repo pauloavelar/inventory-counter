@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout
+<androidx.coordinatorlayout.widget.CoordinatorLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context=".view.MainActivity">
+    tools:context=".ui.ItemsActivity">
 
-    <android.support.design.widget.AppBarLayout
+    <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:theme="@style/AppTheme.AppBarOverlay">
 
-        <android.support.v7.widget.Toolbar
+        <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
@@ -22,14 +22,14 @@
             android:background="?attr/colorPrimary"
             app:popupTheme="@style/AppTheme.PopupOverlay" />
 
-    </android.support.design.widget.AppBarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
 
     <RelativeLayout
         android:id="@+id/inventory_empty"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
-        android:visibility="invisible" >
+        android:visibility="invisible">
 
         <ImageView
             android:id="@+id/image_empty"
@@ -45,32 +45,33 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/image_empty"
-            android:layout_margin="10dp"
-            android:textColor="@color/gray"
+            android:layout_margin="@dimen/field_spacing"
+            android:textColor="@color/textSecondary"
             android:text="@string/no_inventories"
-            android:textSize="18sp"
+            android:textSize="@dimen/field_text_size"
             android:textStyle="bold" />
 
     </RelativeLayout>
 
-    <android.support.v7.widget.RecyclerView
+    <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/list_items"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scrollbars="vertical"
-
         tools:listitem="@layout/layout_list"
         app:layout_behavior="@string/appbar_scrolling_view_behavior" />
 
-    <android.support.design.widget.FloatingActionButton
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
+        android:layout_width="@dimen/button_height"
+        android:layout_height="@dimen/button_height"
         android:layout_gravity="bottom|end"
         android:layout_margin="@dimen/fab_margin"
         android:src="@drawable/ic_add_fab"
-        android:tint="@color/colorPrimary"
+        android:tint="@color/iconAction"
+        android:backgroundTint="@color/colorAccent"
         android:tintMode="src_atop"
-        app:layout_behavior="com.pauloavelar.inventory.view.FabBehavior" />
+        android:contentDescription="@string/add_new_product"
+        app:layout_behavior="com.pauloavelar.inventory.ui.component.FabBehavior" />
 
-</android.support.design.widget.CoordinatorLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

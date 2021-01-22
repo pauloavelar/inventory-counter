@@ -4,21 +4,22 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <android.support.design.widget.TextInputLayout
+    <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="20dp">
+        android:layout_margin="@dimen/field_spacing">
 
-        <EditText
+        <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/edit_new_product"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:padding="10dp"
+            android:layout_height="@dimen/field_height"
+            android:padding="@dimen/activity_horizontal_margin"
             android:hint="@string/product"
-            android:textSize="18sp"
+            android:textSize="@dimen/field_text_size"
             android:textAllCaps="true"
-            android:inputType="textNoSuggestions" />
+            android:inputType="textNoSuggestions"
+            android:importantForAutofill="no" />
 
-    </android.support.design.widget.TextInputLayout>
+    </com.google.android.material.textfield.TextInputLayout>
 
 </LinearLayout>

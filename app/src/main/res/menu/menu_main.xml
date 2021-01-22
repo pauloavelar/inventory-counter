@@ -1,7 +1,7 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".view.MainActivity">
+    tools:context=".ui.ItemsActivity">
 
     <item
         android:id="@+id/action_clear_all"
@@ -13,7 +13,7 @@
         android:id="@+id/action_save"
         android:title="@string/save_to_csv"
         android:icon="@drawable/ic_menu_save"
-        app:showAsAction="ifRoom" />
+        app:showAsAction="always" />
 
     <item
         android:id="@+id/action_products"
