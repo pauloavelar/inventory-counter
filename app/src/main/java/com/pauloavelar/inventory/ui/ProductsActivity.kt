@@ -31,8 +31,8 @@ class ProductsActivity : AppCompatActivity(), KoinComponent {
         setContentView(binding.root)
 
         supportActionBar?.apply {
-            supportActionBar!!.setTitle(R.string.manage_products)
-            supportActionBar!!.setDisplayShowHomeEnabled(true)
+            setTitle(R.string.manage_products)
+            setDisplayShowHomeEnabled(true)
         }
 
         productsAdapter = ProductAdapter(object : ProductAdapter.OnItemInteraction {

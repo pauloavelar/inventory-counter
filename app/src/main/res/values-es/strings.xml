@@ -21,7 +21,7 @@
     <string name="hint_permissions">Por favor dé permisos para crear el archivo CSV.</string>
     <string name="error_no_quantity">Por favor indique una cantidad.</string>
     <string name="error_no_product">Por favor indique un producto.</string>
-    <string name="error_no_lot_code">Por favor indique un lote.</string>
+    <string name="error_no_lot_number">Por favor indique un lote.</string>
     <string name="empty_product">El nombre del producto no puede estar vacío.</string>
     <string name="email_subject">Inventory Counter - Informe</string>
     <string name="edit_product">Editar producto</string>
@@ -33,4 +33,9 @@
     <string name="no_inventories">No se agregaron recuentos</string>
     <string name="fill_last_lot_number">Llenar último lote</string>
     <string name="delete_product">Borrar producto</string>
+    <string name="search_items">Buscar recuentos</string>
+    <string name="clear_search">Limpiar búsqueda</string>
+    <string name="search_label_middle_singular">" resultado de "</string>
+    <string name="search_label_middle_plural">" resultados de "</string>
+    <string name="search_label_start">"Mostrando "</string>
 </resources>

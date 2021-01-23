@@ -24,7 +24,7 @@
     <string name="renaming">Renaming product…</string>
     <string name="edit_product">Edit product</string>
     <string name="error_no_product">Please provide a product.</string>
-    <string name="error_no_lot_code">Please provide a lot code.</string>
+    <string name="error_no_lot_number">Please provide a lot number.</string>
     <string name="error_no_quantity">Please provide a quantity.</string>
     <string name="no">No</string>
     <string name="rename_product">Rename product</string>
@@ -34,4 +34,9 @@
     <string name="chooser_title">Send email using</string>
     <string name="fill_last_lot_number">Fill last used lot number</string>
     <string name="delete_product">Delete product</string>
+    <string name="search_items">Search counts</string>
+    <string name="clear_search">Clear search</string>
+    <string name="search_label_middle_singular">" result of "</string>
+    <string name="search_label_middle_plural">" results of "</string>
+    <string name="search_label_start">"Showing "</string>
 </resources>

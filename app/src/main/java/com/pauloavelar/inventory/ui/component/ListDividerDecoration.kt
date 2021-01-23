@@ -11,6 +11,12 @@ class ListDividerDecoration(context: Context) : ItemDecoration() {
 
     private val mDivider: Drawable?
 
+    init {
+        val styledAttributes = context.obtainStyledAttributes(ATTRS)
+        mDivider = styledAttributes.getDrawable(0)
+        styledAttributes.recycle()
+    }
+
     override fun onDraw(c: Canvas, parent: RecyclerView, state: RecyclerView.State) {
         val left = parent.paddingLeft
         val right = parent.width - parent.paddingRight
@@ -26,12 +32,6 @@ class ListDividerDecoration(context: Context) : ItemDecoration() {
 
     companion object {
         private val ATTRS = intArrayOf(android.R.attr.listDivider)
-    }
-
-    init {
-        val styledAttributes = context.obtainStyledAttributes(ATTRS)
-        mDivider = styledAttributes.getDrawable(0)
-        styledAttributes.recycle()
     }
 
 }

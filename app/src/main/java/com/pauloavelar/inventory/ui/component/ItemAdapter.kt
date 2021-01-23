@@ -7,6 +7,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.pauloavelar.inventory.R
 import com.pauloavelar.inventory.model.InventoryItem
+import com.pauloavelar.inventory.utils.returnTrue
 
 class ItemAdapter(
     private val listener: OnItemInteraction
@@ -53,8 +54,7 @@ class ItemAdapter(
             }
 
             itemView.setOnLongClickListener {
-                listener.onItemLongPress(item)
-                true
+                returnTrue { listener.onItemLongPress(item) }
             }
         }
     }

@@ -15,6 +15,9 @@ interface InventoryDao : BaseDao<InventoryItem> {
     @Query("DELETE FROM item")
     fun deleteAll()
 
+    @Query("SELECT COUNT(*) FROM item")
+    fun countAll(): LiveData<Int>
+
     @Query("SELECT * FROM item ORDER BY dateTime DESC")
     fun findAll(): LiveData<List<InventoryItem>>
 
@@ -26,5 +29,8 @@ interface InventoryDao : BaseDao<InventoryItem> {
 
     @Query("UPDATE item SET product = :newProductName WHERE product = :oldProductName")
     fun updateProductName(oldProductName: String, newProductName: String)
+
+    @Query("SELECT * FROM item WHERE product LIKE '%' || :query || '%' OR lotNumber LIKE '%' || :query || '%' ORDER BY dateTime DESC")
+    fun queryItems(query: String): LiveData<List<InventoryItem>>
 
 }

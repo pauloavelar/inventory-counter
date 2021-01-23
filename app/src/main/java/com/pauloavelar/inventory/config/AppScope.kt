@@ -12,8 +12,4 @@ class AppScope : KoinComponent {
     fun runOnIoThread(block: suspend CoroutineScope.() -> Unit) {
         scope.launch(dispatchers.io(), block = block)
     }
-
-    fun runOnUiThread(block: suspend CoroutineScope.() -> Unit) {
-        scope.launch(dispatchers.main(), block = block)
-    }
 }

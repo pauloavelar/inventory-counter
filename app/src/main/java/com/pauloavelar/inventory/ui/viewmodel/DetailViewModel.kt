@@ -17,11 +17,9 @@ class DetailViewModel : ViewModel(), KoinComponent {
     private val productDao: ProductDao by inject()
 
     private var item: InventoryItem? = null
-    private var editMode: Boolean = false
 
     fun bindItem(item: InventoryItem) {
         this.item = item
-        editMode = true
     }
 
     fun getItem(): InventoryItem? = item

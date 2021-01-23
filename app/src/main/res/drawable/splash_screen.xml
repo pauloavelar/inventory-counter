@@ -3,11 +3,10 @@
 
     <item android:drawable="@drawable/splash_bg" />
 
-    <item android:drawable="@drawable/ic_launcher_fg" android:gravity="center" android:width="255dp" android:height="255dp" />
-<!--    <item>-->
-<!--        <bitmap-->
-<!--            android:src="@drawable/inventory_gray"-->
-<!--            android:gravity="center" />-->
-<!--    </item>-->
+    <item android:drawable="@drawable/ic_launcher_fg"
+        android:gravity="center"
+        android:width="255dp"
+        android:height="255dp"
+    />
 
 </layer-list>

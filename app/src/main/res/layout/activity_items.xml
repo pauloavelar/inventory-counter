@@ -25,7 +25,7 @@
     </com.google.android.material.appbar.AppBarLayout>
 
     <RelativeLayout
-        android:id="@+id/inventory_empty"
+        android:id="@+id/empty_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
@@ -33,12 +33,15 @@
 
         <ImageView
             android:id="@+id/image_empty"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="200dp"
+            android:layout_width="200dp"
             android:layout_alignEnd="@+id/text_empty"
             android:layout_alignStart="@id/text_empty"
             android:contentDescription="@string/no_inventories"
-            android:src="@drawable/inventory_gray" />
+            android:src="@drawable/ic_launcher_fg"
+            android:scaleX="1.5"
+            android:scaleY="1.5"
+            app:tint="@color/textSecondary" />
 
         <TextView
             android:id="@id/text_empty"
@@ -53,13 +56,26 @@
 
     </RelativeLayout>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/list_items"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:scrollbars="vertical"
-        tools:listitem="@layout/layout_list"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+        android:orientation="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <include
+            layout="@layout/search_info"
+            android:id="@+id/search_info"
+        />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/list_items"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="invisible"
+            android:scrollbars="vertical"
+            tools:listitem="@layout/layout_list" />
+
+    </LinearLayout>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab"
@@ -67,11 +83,12 @@
         android:layout_height="@dimen/button_height"
         android:layout_gravity="bottom|end"
         android:layout_margin="@dimen/fab_margin"
-        android:src="@drawable/ic_add_fab"
-        android:tint="@color/iconAction"
-        android:backgroundTint="@color/colorAccent"
+        android:src="@drawable/ic_add"
         android:tintMode="src_atop"
+        android:backgroundTint="@color/colorAccent"
         android:contentDescription="@string/add_new_product"
+        app:tint="@android:color/white"
+        app:borderWidth="0dp"
         app:layout_behavior="com.pauloavelar.inventory.ui.component.FabBehavior" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

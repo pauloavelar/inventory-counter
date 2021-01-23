@@ -23,7 +23,7 @@
     <string name="chooser_title">Enviar email usando</string>
     <string name="edit_product">Editar produto</string>
     <string name="email_subject">Inventory Counter - Relatório</string>
-    <string name="error_no_lot_code">Por favor preencha um lote.</string>
+    <string name="error_no_lot_number">Por favor preencha um lote.</string>
     <string name="error_no_product">Por favor preencha um produto.</string>
     <string name="error_no_quantity">Por favor preencha uma quantidade.</string>
     <string name="no">Não</string>
@@ -33,4 +33,9 @@
     <string name="no_inventories">Nenhum inventário foi adicionado</string>
     <string name="fill_last_lot_number">Preencher último lote</string>
     <string name="delete_product">Excluir produto</string>
+    <string name="search_items">Buscar contagens</string>
+    <string name="clear_search">Limpar busca</string>
+    <string name="search_label_middle_singular">" resultado de "</string>
+    <string name="search_label_middle_plural">" resultados de "</string>
+    <string name="search_label_start">"Mostrando "</string>
 </resources>

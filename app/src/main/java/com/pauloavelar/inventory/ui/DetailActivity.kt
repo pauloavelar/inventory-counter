@@ -7,6 +7,7 @@ import android.widget.*
 import android.widget.AdapterView.OnItemSelectedListener
 import androidx.annotation.StringRes
 import androidx.appcompat.app.AppCompatActivity
+import com.google.android.material.snackbar.Snackbar
 import com.pauloavelar.inventory.R
 import com.pauloavelar.inventory.databinding.ActivityDetailBinding
 import com.pauloavelar.inventory.model.InventoryItem
@@ -106,7 +107,7 @@ class DetailActivity : AppCompatActivity(), KoinComponent {
             showValidationError(R.string.error_no_product)
         }
         binding.editLotNumber.text?.isEmpty() == true -> {
-            showValidationError(R.string.error_no_lot_code)
+            showValidationError(R.string.error_no_lot_number)
         }
         binding.editCount.text?.isEmpty() == true -> {
             showValidationError(R.string.error_no_quantity)
@@ -122,8 +123,10 @@ class DetailActivity : AppCompatActivity(), KoinComponent {
         }
     }
 
-    private fun showValidationError(@StringRes stringId: Int) = Toast
-        .makeText(this, stringId, Toast.LENGTH_SHORT).show()
+    private fun showValidationError(@StringRes stringId: Int) = Snackbar
+        .make(binding.root, stringId, Snackbar.LENGTH_SHORT)
+        .setBackgroundTint(getColor(R.color.actionDanger))
+        .show()
 
     private fun buildProductList(products: List<String> = emptyList()): List<String> =
         listOf(getString(R.string.select_product)) + products + listOf(getString(R.string.add_new_product))
