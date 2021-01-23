@@ -1,12 +1,13 @@
 <resources>
     <string name="app_name" translatable="false">Inventory Counter</string>
+
     <string name="save_to_csv">Save to CSV</string>
     <string name="delete_all_counts">Delete all counts</string>
     <string name="no_inventories">No inventories were added</string>
     <string name="quantity">Quantity</string>
     <string name="delete">Delete</string>
     <string name="save">Save</string>
-    <string name="lot_code">Lot code</string>
+    <string name="lot_number">Lot number</string>
     <string name="product">Product</string>
     <string name="hint_permissions">Please give permissions to create the CSV file.</string>
     <string name="confirm_clear_all">Are you sure? This will delete all counts.</string>
@@ -23,7 +24,7 @@
     <string name="renaming">Renaming product…</string>
     <string name="edit_product">Edit product</string>
     <string name="error_no_product">Please provide a product.</string>
-    <string name="error_no_lot_code">Please provide a lot code.</string>
+    <string name="error_no_lot_number">Please provide a lot number.</string>
     <string name="error_no_quantity">Please provide a quantity.</string>
     <string name="no">No</string>
     <string name="rename_product">Rename product</string>
@@ -31,5 +32,11 @@
     <string name="unable_to_save">Unable to save CSV file.</string>
     <string name="email_subject">Inventory Counter - Report</string>
     <string name="chooser_title">Send email using</string>
-    <string name="error_csv">Error creating CSV file.</string>
+    <string name="fill_last_lot_number">Fill last used lot number</string>
+    <string name="delete_product">Delete product</string>
+    <string name="search_items">Search counts</string>
+    <string name="clear_search">Clear search</string>
+    <string name="search_label_middle_singular">" result of "</string>
+    <string name="search_label_middle_plural">" results of "</string>
+    <string name="search_label_start">"Showing "</string>
 </resources>

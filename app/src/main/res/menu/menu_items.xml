@@ -1,0 +1,30 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.ItemsActivity">
+
+    <item
+        android:id="@+id/action_search"
+        android:icon="@drawable/ic_search"
+        android:title="@string/search_items"
+        app:actionViewClass="androidx.appcompat.widget.SearchView"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_clear_all"
+        android:title="@string/delete_all_counts"
+        android:icon="@drawable/ic_delete"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_save"
+        android:title="@string/save_to_csv"
+        android:icon="@drawable/ic_save"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_products"
+        android:title="@string/manage_products"
+        app:showAsAction="never" />
+
+</menu>

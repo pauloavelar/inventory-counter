@@ -2,8 +2,8 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="50dp"
-    android:padding="10dp">
+    android:layout_height="@dimen/field_height"
+    android:padding="@dimen/list_item_padding">
 
     <TextView
         android:id="@+id/product_name"
@@ -12,31 +12,30 @@
         android:gravity="center_vertical"
         android:layout_toStartOf="@+id/button_product_edit"
         android:layout_alignParentStart="true"
-        android:textSize="18sp" />
+        android:textSize="@dimen/field_text_size" />
 
     <ImageButton
         android:id="@+id/button_product_delete"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="10dp"
+        android:layout_width="@dimen/button_height_secondary"
+        android:layout_height="@dimen/button_height_secondary"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
         android:layout_alignParentEnd="true"
-        android:src="@drawable/ic_menu_delete"
-        android:tint="@color/red"
-        android:tintMode="multiply"
+        android:src="@drawable/ic_delete"
+        android:tint="@color/actionDanger"
+        android:tintMode="src_atop"
         android:background="?attr/selectableItemBackgroundBorderless"
-        android:contentDescription="@null" />
+        android:contentDescription="@string/delete_product" />
 
     <ImageButton
         android:id="@id/button_product_edit"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="5dp"
+        android:layout_width="@dimen/button_height_secondary"
+        android:layout_height="@dimen/button_height_secondary"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
         android:layout_toStartOf="@id/button_product_delete"
-        android:src="@drawable/ic_menu_edit"
+        android:src="@drawable/ic_edit"
         android:tint="@color/colorAccent"
-        android:tintMode="multiply"
+        android:tintMode="src_atop"
         android:background="?attr/selectableItemBackgroundBorderless"
-        android:contentDescription="@null" />
+        android:contentDescription="@string/rename_product" />
 
 </RelativeLayout>

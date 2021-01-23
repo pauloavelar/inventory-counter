@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".ui.ItemsActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:title="@string/app_name"
+            app:titleTextColor="@android:color/white"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <RelativeLayout
+        android:id="@+id/empty_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:visibility="invisible">
+
+        <ImageView
+            android:id="@+id/image_empty"
+            android:layout_height="200dp"
+            android:layout_width="200dp"
+            android:layout_alignEnd="@+id/text_empty"
+            android:layout_alignStart="@id/text_empty"
+            android:contentDescription="@string/no_inventories"
+            android:src="@drawable/ic_launcher_fg"
+            android:scaleX="1.5"
+            android:scaleY="1.5"
+            app:tint="@color/textSecondary" />
+
+        <TextView
+            android:id="@id/text_empty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/image_empty"
+            android:layout_margin="@dimen/field_spacing"
+            android:textColor="@color/textSecondary"
+            android:text="@string/no_inventories"
+            android:textSize="@dimen/field_text_size"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <include
+            layout="@layout/search_info"
+            android:id="@+id/search_info"
+        />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/list_items"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="invisible"
+            android:scrollbars="vertical"
+            tools:listitem="@layout/layout_list" />
+
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="@dimen/button_height"
+        android:layout_height="@dimen/button_height"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        android:src="@drawable/ic_add"
+        android:tintMode="src_atop"
+        android:backgroundTint="@color/colorAccent"
+        android:contentDescription="@string/add_new_product"
+        app:tint="@android:color/white"
+        app:borderWidth="0dp"
+        app:layout_behavior="com.pauloavelar.inventory.ui.component.FabBehavior" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
