@@ -15,7 +15,7 @@ abstract class AppDatabase : RoomDatabase() {
     abstract fun getProductDao(): ProductDao
 
     companion object {
-        const val DB_NAME = "data.db"
+        const val DB_NAME = "inventory.db"
     }
 
     class Converters {

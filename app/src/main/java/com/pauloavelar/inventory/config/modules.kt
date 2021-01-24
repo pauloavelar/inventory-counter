@@ -39,6 +39,7 @@ private val concurrencyModule = module(override = true) {
 private val persistenceModule = module(override = true) {
     fun provideDatabase(app: Application) = Room
         .databaseBuilder(app, AppDatabase::class.java, AppDatabase.DB_NAME)
+        .fallbackToDestructiveMigration()
         .build()
 
     fun provideProductDao(db: AppDatabase) = db.getProductDao()
